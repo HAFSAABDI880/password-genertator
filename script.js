@@ -15,7 +15,6 @@ function generatePassword () {
 
   if ( passwordLength < 8 || passwordLength>128) {
     alert("error");
-    return passwordLength;
  } else if (passwordLength >= 8 || passwordLength <=128){
 
  }
@@ -27,7 +26,6 @@ function generatePassword () {
 
  if (!islowerCase && !isupperCase && isNumbers && !ispecial) {
   alert ();
-  return;
  }
  // 
  const choices =[]
@@ -57,8 +55,8 @@ password += randomCharacters.charAt(
   Math.floor (Math.random() *randomCharacters.length)
 );
 }
-{return password ;
-}
+
+
 
  // Write password to the #password input
 function writePassword() {
