@@ -37,9 +37,11 @@ function generatePassword () {
   choices.push (lowerCase);
  }
  if(isNumbers){
-  choices.push (spe)
+  choices.push (Numbers);
  }
-
+ if( isSpecial){
+  choices.push (speical);
+ }
  // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
