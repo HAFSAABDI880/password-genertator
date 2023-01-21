@@ -30,16 +30,16 @@ function generatePassword () {
  // 
  const choices =[]
  if (isupperCase){
-  choices.push(upperCase);
+  choices.push(isupperCase);
  }
  if(islowerCase){
-  choices.push (lowerCase);
+  choices.push (islowerCase);
  }
  if(isNumbers){
-  choices.push (Numbers);
+  choices.push (isNumbers);
  }
- if( isSpecial){
-  choices.push (speical);
+ if( ispecial){
+  choices.push (ispecial);
  }
 let password= "";
 
@@ -47,23 +47,19 @@ let password= "";
 
  // generate random password 
  for ( let i=0; i < 10; i++) { 
-const randomChoiceIndex= Maths.floor (Maths.random( )* choices.length); 
+const randomChoiceIndex= Math.floor (Math.random( )* choices.length); 
 
-const randomCharacters= choice [randomChoiceIndex];
+const randomCharacters= choices [randomChoiceIndex];
 
-password += randomCharacters.charAt(
-  Math.floor (Math.random() *randomCharacters.length)
-);
-}
+password += randomCharacters 
+ }
 
 
 
  // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();8
-var passwordText = document.querySelector("#password");
- passwordText.value = password;
-
-}
+ function writePassword(params) {
+  var password= generatePassword();
+  var paswordTezt= document.querySelector('#password');
+ } 
  //Add event listener to generate button
-  generateBtnaddEventListener ("click", writePassword);
+  generateBtn.addEventListener ("click", writePassword);
