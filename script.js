@@ -46,16 +46,7 @@ let password= "";
 
 
  // generate random password 
- for ( let i=0; i < 10; i++) { 
-const randomChoiceIndex= Math.floor (Math.random( )* choices.length); 
-
-const randomCharacters= choices [randomChoiceIndex];
-
-password += randomCharacters 
- }
-
-
-
+  
  // Write password to the #password input
  function writePassword(params) {
   var password= generatePassword();
